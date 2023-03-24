@@ -2,6 +2,7 @@ import { fetchMovieDetails } from '@/utils/api'
 import React from 'react'
 import Cast from './components/Cast';
 import Overview from './components/Overview';
+import SimilarMovies from './components/SimilarMovies';
 import Trailer from './components/Trailer';
 
 const MoviePage = async ({ params }) => {
@@ -15,6 +16,7 @@ const MoviePage = async ({ params }) => {
             }
             <Overview movie={movie} />
             <Cast movie={movie} />
+            <SimilarMovies movie={movie} />
         </div>
     )
 }

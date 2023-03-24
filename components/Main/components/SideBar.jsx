@@ -31,7 +31,7 @@ const SideBar = async () => {
 
 
   return (
-    <aside className='hidden  lg:col-span-1 lg:flex flex-col gap-[20px] h-full  '>
+    <aside className=' flex flex-col gap-[20px] h-full  '>
         <SideBarList items={movieCategories.genres} title={"Türler"} />
         <SideBarList items={years} title={"Yıllar"} />
 

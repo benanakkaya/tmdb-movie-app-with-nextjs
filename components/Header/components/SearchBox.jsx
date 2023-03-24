@@ -27,8 +27,8 @@ const SearchBox = () => {
 
 
     return (
-        <div className='relative flex items-center bg-customGray  rounded-xl' >
-            <input value={searchIndex} onChange={(e) => handleChange(e)} className='hidden md:block px-3 pr-8 py-2 w-[300px] bg-customGray rounded-xl outline-none text-white' placeholder='Film ara...' type="text" />
+        <div className='relative hidden md:flex items-center bg-customGray  rounded-xl' >
+            <input value={searchIndex} onChange={(e) => handleChange(e)} className=' px-3 pr-8 py-2 w-[300px] bg-customGray rounded-xl outline-none text-white' placeholder='Film ara...' type="text" />
             {searchIndex.length > 0 &&
                 <TiDelete onClick={handleCancel} className='absolute right-2 text-lg text-customRed cursor-pointer' />
             }

@@ -5,7 +5,7 @@ const Cast = ({ movie }) => {
     return (
         <div className='bg-veryDark text-white rounded-lg p-[20px] w-full flex flex-col gap-4'>
             <div className='text-bold'>Öne Çıkan Oyuncular:</div>
-            <div className='overflow-auto grid grid-cols-6 items-center  gap-3'>
+            <div className='overflow-auto grid grid-cols-2  md:grid-cols-3  lg:grid-cols-6 items-center  gap-3'>
                 {movie.credits.cast.slice(0,6).map((cast) => (
                     <Link href="/" className='flex flex-col gap-1 text-xs items-center group'>
                         <div className='rounded-full group-hover:border-customRed border-customGray border-2 w-24 h-24 flex items-center justify-center'>

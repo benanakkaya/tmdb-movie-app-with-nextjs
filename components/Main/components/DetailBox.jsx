@@ -6,7 +6,7 @@ import { AiFillCaretLeft, AiFillCaretRight, AiFillCalendar, AiFillStar } from 'r
 const DetailBox = ({ movie, index }) => {
 
     return (
-        <div className={`absolute z-30 ${((index - 3) % 5 === 0 || (index - 4) % 5 === 0) ? 'right-[105%]' : 'left-[105%]'} top-2 hidden lg:group-hover:flex rounded-md `}>
+        <div className={`absolute z-30 ${((index - 3) % 5 === 0 || (index - 4) % 5 === 0)  ? 'right-[105%]' : 'left-[105%]'} top-2 hidden lg:group-hover:flex rounded-md `}>
             <div className='bg-dark w-56 rounded-md'>
                 <div className='bg-customRed p-1 text-white  flex items-center relative text-xs rounded-t-md'>
                     {movie.title}
@@ -21,14 +21,14 @@ const DetailBox = ({ movie, index }) => {
                 </div>
                 <div className='p-2 text-[10px] leading-[10px]  text-customRed border-t border-white border-opacity-75 flex items-center justify-between'>
                     <div className='flex items-center gap-2'>
-                        <AiFillStar  />
+                        <AiFillStar />
                         <span className='text-white  text-opacity-75'>{movie.vote_average}</span>
 
                     </div>
                     <div className='flex items-center gap-2'>
 
                         <span className='text-white  text-opacity-75'>{movie.release_date}</span>
-                        <AiFillCalendar  />
+                        <AiFillCalendar />
                     </div>
 
                 </div>

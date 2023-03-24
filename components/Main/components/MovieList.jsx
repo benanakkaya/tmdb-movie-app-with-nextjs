@@ -17,7 +17,7 @@ const MovieList = async ({paramsPage}) => {
 
 
   return (
-    <div className='col-span-5 grid-cols-2 lg:col-span-4 grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 h-auto'>
+    <div className='grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 '>
         {movieList.results.map((movie,index) => (
         <MovieCard key={movie.id} index={index} movie={movie} />
         ))}
