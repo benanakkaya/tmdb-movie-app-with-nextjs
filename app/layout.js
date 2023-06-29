@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='bg-customGray lg:px-[165px] lg:py-[20px] text-[14px] font-roboto'>
+      <body className='bg-customGray container lg:px-[100px] lg:py-[15px] text-[14px] font-roboto'>
         <Header />
         {children}
         <Footer />

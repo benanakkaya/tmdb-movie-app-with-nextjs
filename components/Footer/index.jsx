@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className='bg-veryDark p-[20px] flex flex-col gap-1'>
+        <footer className='container bg-veryDark p-[20px] flex flex-col gap-1'>
             <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-1 p-[20px]'>
                 <Link href="/" className="text-3xl text-customRed font-bold">Movies</Link>
                 <div className='grid grid-cols-3 gap-10 sm:gap-18 md:gap-24 text-sm '>
