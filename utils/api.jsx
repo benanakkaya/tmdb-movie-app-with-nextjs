@@ -6,7 +6,7 @@ export const fethCategories = async () => {
 
 export const fetchPopularMovies = async (pageValue) => {
     let page = pageValue ? pageValue : 1;
-    const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&page=${page}&language=tr-TR&region=TR`);
+    const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&page=${page}&language=tr-TR&region=TR`, { cache: 'no-store' });
     return res.json();
 }
 

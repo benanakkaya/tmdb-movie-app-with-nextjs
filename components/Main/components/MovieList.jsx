@@ -3,6 +3,7 @@ import React from 'react'
 import MovieCard from './MovieCard';
 import Paginition from './Paginition';
 
+export const fetchCache = 'force-no-store';
 
 const MovieList = async ({ page, category, year,paginationColor,paginationBG }) => {
 
