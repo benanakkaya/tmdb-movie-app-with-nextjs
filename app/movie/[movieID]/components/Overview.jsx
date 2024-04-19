@@ -3,6 +3,8 @@ import Link from 'next/link'
 import React from 'react'
 
 const Overview = ({ movie }) => {
+
+    console.log(movie)
     return (
         <div className='bg-veryDark rounded-lg p-[20px] flex flex-col  md:flex-row gap-4'>
             <Image className='rounded-lg' src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`} width={300} height={450} alt={movie.title} />
@@ -24,7 +26,7 @@ const Overview = ({ movie }) => {
                 <div className='text-sm font-bold items-center flex gap-2'>
                     Tür:
                     <span className='flex gap-2 items-center'>
-                        {movie.genres.map((genre) => <Link href="/" className='rounded-xl border border-customRed border-opacity-50 p-1 font-normal text-customRed '>{genre.name}</Link>)}
+                        {movie.genres.map((genre) => <Link key={genre.id} href={`/category/${genre.id}`} className='rounded-xl border border-customRed border-opacity-50 p-1 font-normal text-customRed '>{genre.name}</Link>)}
                     </span>
                 </div>
                 <p className='text-white text-opacity-75'>

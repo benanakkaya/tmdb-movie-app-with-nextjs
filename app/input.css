@@ -3,3 +3,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-prev {
+    z-index: 40;
+    margin: 0 40px;
+}
+
+.slick-next{
+    margin: 0 40px;
+}
+
+.slick-arrow{
+  scale: 150%;
+}
+

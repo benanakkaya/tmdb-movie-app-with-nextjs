@@ -39,8 +39,8 @@ const SearchBox = () => {
                             <Link onClick={handleCancel} href={`/movie/${movie.id}`} className='p-1 flex  gap-2 text-[10px]'>
                                 <Image src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt={movie.title} width={44} height={65} />
                                 <div className='flex flex-col gap-1'>
-                                    <small>{movie.title}</small>
-                                    <small className=' text-gray-300'>({movie.original_title})</small>
+                                    <small className='text-sm'>{movie.title}</small>
+                                    <small className='text-xs text-gray-300'>({movie.original_title})</small>
                                     <p className='text-gray-400'>{movie.overview.slice(0, 90)}...</p>
                                 </div>
                             </Link>

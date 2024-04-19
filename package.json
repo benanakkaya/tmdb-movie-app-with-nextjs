@@ -15,7 +15,9 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-loading-skeleton": "^3.2.0",
-    "react-parallax-tilt": "^1.7.118"
+    "react-parallax-tilt": "^1.7.118",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "tailwindcss": "^3.2.7"

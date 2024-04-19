@@ -12,7 +12,7 @@ const Trailer = ({ trailer, bg }) => {
             {play === false ?
                 <div onClick={() => setPlay(true)} className='flex w-full justify-center items-center relative cursor-pointer group'>
                     <div className='relative w-full'>
-                        <Image className='rounded-lg w-full aspect-video' src={`https://www.themoviedb.org/t/p/w533_and_h300_bestv2/${bg}`} width={1200} height={675} alt="trailer" />
+                        <Image className='rounded-lg w-full aspect-video' src={`https://www.themoviedb.org/t/p/w1280_and_h720_bestv2/${bg}`} width={1200} height={675} alt="trailer" />
                         <div className='absolute top-0 left-0 rounded-lg bg-black bg-opacity-50 w-full h-full' />
                     </div>
                     <BsGooglePlay className=' text-7xl text-customRed absolute  group-hover:animate-bounce transition-all duration-500' />

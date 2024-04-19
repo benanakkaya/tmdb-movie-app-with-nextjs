@@ -14,20 +14,24 @@ const Nav = async () => {
     const navItems = [
         {
             id: 1,
-            name: "Ana Sayfa"
+            name: "Ana Sayfa",
+            path:"/"
         },
         {
             id: 2,
-            name: "2023 Filmleri"
+            name: "2024 Filmleri",
+            path:"/year/2024"
         },
         {
             id: 3,
             name: <span className='flex items-center gap-2'>Film Kategorileri <AiFillCaretDown className='text-xs'/></span>,
+            path:"/",
             subList: movieCategories.genres
         },
         {
             id: 4,
-            name: "Top 250"
+            name: "Top 250",
+            path: "/"
         }
     ]
 
@@ -38,13 +42,13 @@ const Nav = async () => {
             <ul className='flex w-full flex-col md:flex-row items-center h-full text-white text-opacity-75 gap-3 md:gap-0'>
                 {navItems.map((category,) => (
                     <li key={category.id} className='w-full h-full flex flex-col gap-2 items-center relative group p-2 md:p-0'>
-                        <Link href="/" className='h-full flex items-center px-2 md:group-hover:border-b-2 md:group-hover:border-customRed relative'>
+                        <Link href={category.path} className='h-full flex items-center px-2 border-b-2 border-b-transparent md:group-hover:border-customRed relative'>
                             {category.name}
                         </Link>
                         {category.subList &&
-                            <div className='md:absolute w-full z-30 md:w-80 bg-lightDark p-4 hidden rounded-lg rounded-tl-none md:group-hover:grid grid-cols-3 left-0 top-[100%] gap-1 ' >
+                            <div className='md:absolute w-full z-30 md:w-80 bg-dark p-4 hidden rounded-lg rounded-tl-none md:group-hover:grid grid-cols-3 left-0 top-[100%] gap-1 ' >
                                 {category.subList?.slice(0, 18).map((cat, ind) => (
-                                    <Link className='hover:text-customRed' key={ind} href="/">{cat.name}</Link>
+                                    <Link className='hover:text-customRed' key={ind} href={`/category/${cat.id}`}>{cat.name}</Link>
                                 ))}
                             </div>
                         }

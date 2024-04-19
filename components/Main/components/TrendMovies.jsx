@@ -4,12 +4,13 @@ import Link from 'next/link';
 import React from 'react'
 
 const TrendMovies = async () => {
+    
 
     const trendMovies = await fetchTrendMovies();
 
 
     return (
-        <div className='px-[20px] grid grid-cols-2 md:grid-cols-4 gap-3 pb-[20px]'>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
             {trendMovies.results.slice(4,8).map((movie) => (
             <Link className='relative group flex justify-center' href={`/movie/${movie.id}`}>
                 <Image className='rounded-xl' src={`https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/${movie.backdrop_path}`} width={264} height={468} alt={movie.title} />
