@@ -33,14 +33,14 @@ const SearchBox = () => {
                 <TiDelete onClick={handleCancel} className='absolute right-2 text-lg text-customRed cursor-pointer' />
             }
             {movieList.length > 0 &&
-                <ul className='p-2 text-white w-full absolute z-40 rounded-md top-full bg-lightDark '>
+                <ul className='p-2 text-white w-full absolute z-40 rounded-md top-full bg-lightDark mt-1 border border-veryDark '>
                     {movieList.filter((mov) => mov.poster_path).slice(0, 4).map((movie) => (
                         <li>
                             <Link onClick={handleCancel} href={`/movie/${movie.id}`} className='p-1 flex  gap-2 text-[10px]'>
-                                <Image src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt={movie.title} width={44} height={65} />
+                                <Image className='w-[50px] h-[75px]' src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt={movie.title} width={220} height={330} />
                                 <div className='flex flex-col gap-1'>
-                                    <small className='text-sm'>{movie.title}</small>
-                                    <small className='text-xs text-gray-300'>({movie.original_title})</small>
+                                    <small className='text-sm'>{movie.title.length > 30 ? movie.title.slice(0,30)+"..." : movie.title}</small>
+                                    <small className='text-xs text-gray-300'>({movie.original_title.length > 30 ? movie.original_title.slice(0,30)+"..." : movie.original_title})</small>
                                     <p className='text-gray-400'>{movie.overview.slice(0, 90)}...</p>
                                 </div>
                             </Link>

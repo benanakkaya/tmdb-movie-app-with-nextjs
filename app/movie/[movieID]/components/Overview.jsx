@@ -4,7 +4,6 @@ import React from 'react'
 
 const Overview = ({ movie }) => {
 
-    console.log(movie)
     return (
         <div className='bg-veryDark rounded-lg p-[20px] flex flex-col  md:flex-row gap-4'>
             <Image className='rounded-lg' src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`} width={300} height={450} alt={movie.title} />

@@ -15,13 +15,13 @@ const MovieList = async ({ page, category, year,paginationColor,paginationBG }) 
     movieList = await fetchPopularMovies(page);
   }
 
- 
+
   return (
     <div className='grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[20px]'>
       {movieList.results.map((movie, index) => (
         <MovieCard key={movie.id} index={index} movie={movie} />
       ))}
-      <Paginition paginationColor={paginationColor} paginationBG={paginationBG} category={category} page={page} />
+      <Paginition totalPages={100}  paginationColor={paginationColor} paginationBG={paginationBG} category={category} page={page} />
     </div>
   )
 }

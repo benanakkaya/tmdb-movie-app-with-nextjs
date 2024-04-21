@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react'
 
-const Paginition = ({ page,paginationColor,paginationBG}) => {
+const Paginition = ({ page, paginationColor, paginationBG, totalPages }) => {
 
     const path = usePathname();
-    
+
     const activePage = Number(page) || 1;
 
 
@@ -24,14 +24,22 @@ const Paginition = ({ page,paginationColor,paginationBG}) => {
                 </>
             }
             <Link href={`${path}?page=${activePage}`} disabled className={`border-[1px] ${paginationColor} ${paginationBG} text-white  px-3 py-1`}>{activePage}</Link>
-            {activePage + 1 <= 150 &&
-                <>
-                    <Link href={`${path}?page=${activePage + 1}`} className={`border-[1px] ${paginationColor} text-white text-opacity-75 px-3 py-1`}>{activePage + 1}</Link>
-                    <Link href={`${path}?page=${activePage + 2}`} className={`border-[1px] ${paginationColor} text-white text-opacity-75 px-3 py-1`}>{activePage + 2}</Link>
-                    <Link href={`${path}?page=${activePage + 3}`} className={`border-[1px] ${paginationColor} text-white text-opacity-75 px-3 py-1`}>{activePage + 3}</Link>
-                    <Link href={`${path}?page=${activePage + 4}`} className={`border-[1px] ${paginationColor} text-white text-opacity-75 px-3 py-1`}>{activePage + 4}</Link>
-                    <Link href={`${path}?page=${activePage + 5}`} className={`border-[1px] ${paginationColor} text-white text-opacity-75 px-3 py-1`}>İleri</Link>
-                    <Link href={`${path}?page=${150}`}  className={`border-[1px] hidden md:block ${paginationColor} text-white text-opacity-75 px-3 py-1`}>Son</Link>
+            {activePage + 1 <= totalPages &&
+                <Link href={`${path}?page=${activePage + 1}`} className={`border-[1px] ${paginationColor} text-white text-opacity-75 px-3 py-1`}>{activePage + 1}</Link>
+            }
+            {activePage + 2 <= totalPages &&
+                <Link href={`${path}?page=${activePage + 2}`} className={`border-[1px] ${paginationColor} text-white text-opacity-75 px-3 py-1`}>{activePage + 2}</Link>
+            }
+            {activePage + 3 <= totalPages &&
+                <Link href={`${path}?page=${activePage + 3}`} className={`border-[1px] ${paginationColor} text-white text-opacity-75 px-3 py-1`}>{activePage + 3}</Link>
+            }
+            {activePage + 4 <= totalPages &&
+                <Link href={`${path}?page=${activePage + 4}`} className={`border-[1px] ${paginationColor} text-white text-opacity-75 px-3 py-1`}>{activePage + 4}</Link>
+            }
+            {activePage < totalPages &&
+                <>                
+                    <Link href={`${path}?page=${activePage + 1}`} className={`border-[1px] ${paginationColor} text-white text-opacity-75 px-3 py-1`}>İleri</Link>
+                    <Link href={`${path}?page=${totalPages}`} className={`border-[1px] hidden md:block ${paginationColor} text-white text-opacity-75 px-3 py-1`}>Son</Link>
                 </>
             }
         </div>

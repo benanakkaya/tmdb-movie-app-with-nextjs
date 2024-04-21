@@ -30,8 +30,8 @@ const Nav = async () => {
         },
         {
             id: 4,
-            name: "Top 250",
-            path: "/"
+            name: "Aksiyon Filmleri",
+            path: "/category/28"
         }
     ]
 

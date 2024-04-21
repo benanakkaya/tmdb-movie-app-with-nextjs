@@ -12,7 +12,7 @@ const UpcomingMovies = async () => {
     <div >
         <div className='bg-dark rounded-lg p-3 text-white flex flex-col gap-4'>
             <div className='flex items-center w-full justify-between'>
-                <strong className='text-[14px] leading-[21px] font-bold'>Vizyona Girecek Filmler</strong>
+                <strong className='text-[14px] leading-[21px] font-bold'>Gündemdeki Son Eklenen Filmler</strong>
                 
             </div>
             <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8'>
